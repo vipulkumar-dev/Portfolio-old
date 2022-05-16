@@ -3,17 +3,17 @@ new fullpage("#fullpage", {
   autoScrolling: true,
   scrollHorizontally: true,
   navigation: true,
+  scrollingSpeed: 700,
 
   onLeave: function (index, nextIndex, direction) {
-    if (nextIndex.index == 2) {
+    if (nextIndex.index == 1) {
       console.log("vipul");
       anime({
         targets: ".js-letter",
-        translateY: "180%",
-        translateX: "180%",
-        duration: 800,
-        delay: 700,
+        translateX: ["-105%", 0],
         easing: "easeInOutCubic",
+        duration: 800,
+        delay: anime.stagger(50, { start: 500 }),
       });
     }
   },

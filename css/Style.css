@@ -17,13 +17,68 @@ html {
 }
 
 .section h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.section h2 {
   font-size: 6rem;
 }
 
-/* testing */
+.title {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 200;
+  margin-left: 11%;
+}
+
+.section .title__text {
+  font-size: 12rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.6rem;
+  /* text-shadow: 0 10px 30px rgba(2, 11, 22, 0.5); */
+}
+
+.title .border {
+  margin-bottom: 3.2rem;
+}
+
+.title .border span {
+  display: block;
+  width: 88px;
+  height: 4px;
+  border-radius: 5px;
+  background: #ff4d5a;
+}
+
+.title .border span:first-child {
+  margin-bottom: 1.4rem;
+}
+
+.title .border span:last-child {
+  margin-left: 54px;
+}
+
+.title__lead {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.btn-wrap {
+  margin-top: 3.2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #fff;
+  background: #ff4d5a;
+  line-height: 1;
+  font-weight: bold;
+  padding: 18px 32px;
+  border-radius: 50px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
