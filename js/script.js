@@ -2,9 +2,12 @@ new fullpage("#fullpage", {
   //options here
   autoScrolling: true,
   scrollHorizontally: true,
-  navigation: true,
-  scrollingSpeed: 1000,
+  // navigation: true,
+  navigationPosition: "left",
+  scrollingSpeed: 1300,
+  easingcss3: "cubic-bezier(.70,0,.30,1)",
   anchors: ["firstPage", "secondPage", "thirdPage", "fourthPage"],
+  credits: { enabled: false },
 
   onLeave: function (index, nextIndex, direction) {
     if (nextIndex.index == 1) {
@@ -13,7 +16,7 @@ new fullpage("#fullpage", {
         translateX: ["-105%", 0],
         easing: "easeInOutCubic",
         duration: 900,
-        delay: anime.stagger(50, { start: 300 }),
+        delay: anime.stagger(50, { start: 500 }),
       });
 
       anime({
@@ -21,10 +24,8 @@ new fullpage("#fullpage", {
         translateX: [0, "110%"],
         translateZ: 0,
         easing: "easeInOutQuart",
-        function(el, i) {
-          return 1200 - 200 * i;
-        },
-        delay: anime.stagger(50),
+        duration: 1200,
+        delay: anime.stagger(50, { start: 200 }),
       });
 
       anime({
@@ -33,7 +34,7 @@ new fullpage("#fullpage", {
         translateX: ["10%", 0],
         translateZ: 0,
         easing: "easeOutCubic",
-        duration: 1500,
+        duration: 2200,
         delay: 50,
       });
     }
