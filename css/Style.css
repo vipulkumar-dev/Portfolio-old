@@ -14,6 +14,10 @@ html {
   font-size: 62.5%;
 }
 
+html body {
+  background-color: 000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -147,6 +151,26 @@ html {
   width: 100%;
   height: 100vh;
 }
+
+.s1 .logoAll {
+  display: flex;
+}
+
+.s1 .logoAll .logo {
+  width: 110px;
+  height: 110px;
+}
+
+.s1 .logoAll .logo div:last-child {
+  display: none;
+}
+
+.s1 img {
+  width: 110px;
+  height: 110px;
+  position: absolute;
+}
+
 .s1 h2 {
   font-size: 14rem;
   line-height: 1;
