@@ -1,4 +1,12 @@
 @font-face {
+  font-family: "rl-unnoregular";
+  src: url("../font/rl-unno-regular-webfont.woff2") format("woff2"),
+    url("../font/rl-unno-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "pp_right_grotesktall_regular";
   src: url("../font/rightgrotesk-tallregular-webfont.woff2") format("woff2"),
     url("../font/rightgrotesk-tallregular-webfont.woff") format("woff");
@@ -7,22 +15,17 @@
 }
 
 @font-face {
-  font-family: "rl-unnoregular";
-  src: url("../font/rl-unno-regular-webfont.woff2") format("woff2"),
-    url("../font/rl-unno-regular-webfont.woff") format("woff");
+  font-family: "futuramedium";
+  src: url("../font/futura-med-webfont.woff2") format("woff2"),
+    url("../font/futura-med-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
+
 :root {
-  --blue: #38d1f1;
-  --green: #04bf0c;
-  --orange: #ffa543;
-  --red: #ec4343;
-  --purple: #8c44d9;
-  --secondary-color: #2e5bdc;
-  --primary-color: #5a82f1;
-  --text-color: #212121;
-  --white: #fff;
+  --primary-color: #fcdf3e;
+  --text-color: #f9f9f9;
+  --background-color: #0a0a0a;
 }
 
 html {
@@ -31,13 +34,14 @@ html {
 
 html body {
   background-color: 000;
+  background-color: var(--background-color);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "rl-unnoregular", monospace;
+  font-family: "futuramedium", monospace;
   color: var(--text-color);
 }
 
@@ -48,8 +52,9 @@ html body {
   width: 100%;
   height: 100vh;
   transform: translate(0%, 0%);
-  transition: transform 1s cubic-bezier(0.87, -0.01, 0.67, 0.99);
-  background-color: #0c0c0c;
+  /* transform: translate(0%, -120%); */
+  transition: transform 1.5s cubic-bezier(1, 0, 0.29, 1);
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,6 +63,27 @@ html body {
 
 .home__starteranimation .animation__container {
   width: 55%;
+}
+
+.grain__overlay {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  pointer-events: none;
+  z-index: 10000;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0px;
+  background-image: url("https://uploads-ssl.webflow.com/620f7be7ba14210e13ef2aa0/62139eb491f4e8aa9259c525_noise.gif");
+  background-position: 0px 0px;
+  background-size: 250px;
+  opacity: 0.06;
+}
+
+.home__hero .row .large {
+  font-family: "rl-unnoregular", monospace;
 }
 
 .home__hero .row .small {
@@ -75,6 +101,16 @@ html body {
   text-align: center;
 }
 
+.up {
+  transform: translate(0%, 500px);
+  transition: transform 1.5s ease;
+  transition-delay: 0.4s;
+}
+
+.up.active {
+  transform: translate(0%, 0%);
+}
+
 .home__hero .row {
   overflow: hidden;
 }
@@ -84,12 +120,13 @@ html body {
 } */
 
 .home__hero .large {
-  font-size: clamp(20rem, 20vw, 50rem);
+  font-size: clamp(10rem, 15vw, 28rem);
   line-height: 0.8em;
+  letter-spacing: 6px;
 }
 
 .home__hero .small {
-  font-size: clamp(15rem, 15vw, 30rem);
+  font-size: clamp(10rem, 11vw, 19.6rem);
   line-height: 0.8em;
 }
 
@@ -99,33 +136,47 @@ html body {
   justify-content: center;
 }
 
-.home__hero .row__one .small {
-  margin-left: 3vw;
+.home__hero .row__two .small {
+  margin-left: 0;
 }
 
 .home__hero .row__three .small {
   margin-right: 3vw;
 }
-.home__hero .row__two .image__wrapper {
+
+.home__hero .row__one .image__wrapper {
   overflow: hidden;
-  width: 20%;
-  height: 15.4rem;
-  padding-top: 0em;
+  width: 22%;
+  height: 135px;
+  margin-left: 5.7vw;
 }
 
-.home__hero .row__three .image__wrapper {
+.home__hero .row__two .image__wrapper {
   overflow: hidden;
-  width: 28%;
-  margin-bottom: 0em;
-  margin-left: 3.5vw;
-  padding-top: 0.125em;
+  width: 10vw;
+  height: 11.4rem;
+  margin-inline: 3.5vw;
 }
 
 .home__hero .image__wrapper img {
   width: 100%;
   height: 100%;
-  margin-right: 0px;
-  padding-right: 0em;
-  -o-object-fit: cover;
   object-fit: cover;
+}
+
+@media screen and (max-width: 400px) {
+  .home__hero .row {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .home__hero .large {
+    font-size: clamp(5rem, 20vw, 50rem);
+    line-height: 0.8em;
+  }
+
+  .home__hero .small {
+    font-size: clamp(5rem, 15vw, 30rem);
+    line-height: 0.8em;
+  }
 }
