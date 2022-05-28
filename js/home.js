@@ -41,13 +41,16 @@ anim.addEventListener("complete", function () {
       delay: 250,
     });
 
-    anime({
-      targets: `.home__hero`,
-      scale: [1, 0.9],
-      easing: "cubicBezier(.8,0,0,1)",
-      duration: 1500,
-      delay: 1500,
-    });
+    // gsap.fromTo(
+    //   ".home__hero",
+    //   { scale: 1 },
+    //   {
+    //     duration: 1.5,
+    //     scale: 0.9,
+    //     delay: 1,
+    //     ease: CustomEase.create("custom", "M0,0 C0.8,0 0,1 1,1 "),
+    //   }
+    // );
 
     anime({
       targets: `.menuup`,
@@ -56,6 +59,17 @@ anim.addEventListener("complete", function () {
       easing: "cubicBezier(.8,0,0,1)",
       duration: 1500,
       delay: 1500,
+    });
+
+    anime({
+      targets: `.home__hero`,
+      scale: [1, 0.9],
+      easing: "cubicBezier(.8,0,0,1)",
+      duration: 1500,
+      delay: 1500,
+      complete: function () {
+        home__hero.style.transition = "all 0.8s cubic-bezier(0.66, 0, 0.18, 1)";
+      },
     });
   }, 300);
 });
@@ -70,6 +84,8 @@ gsap.to(".circulerText", {
   rotate: 720,
 });
 
+const home__hero = document.querySelector(".home__hero");
+
 gsap.to(".home__hero", {
   scrollTrigger: {
     trigger: ".s2",
@@ -79,10 +95,11 @@ gsap.to(".home__hero", {
     pinSpacing: false,
     markers: true,
     onUpdate: (self) => {
-      if (self.progress >= 1) {
-        console.log("progress", self.progress);
+      if (self.progress >= 0.15) {
+        home__hero.classList.add("active");
+      } else {
+        home__hero.classList.remove("active");
       }
     },
-    // scrub: true,
   },
 });

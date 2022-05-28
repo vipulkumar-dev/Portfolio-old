@@ -84,6 +84,15 @@ html body {
   opacity: 0.06;
 }
 
+.home__hero {
+  /* transition: all 0.8s cubic-bezier(0.66, 0, 0.18, 1); */
+}
+
+.home__hero.active {
+  opacity: 0;
+  transform: scale(0.85) !important;
+}
+
 .home__hero .row .large {
   font-family: "rl-unnoregular", monospace;
 }
@@ -234,26 +243,27 @@ html body {
   /* font-weight: 400; */
 }
 
-.s2 .background {
-  position: absolute;
-  z-index: 0;
-  /* width: 100%;
-  height: 100vh; */
-  background-color: var(--primary-color);
-  top: 50%;
-  transform-origin: 50% 0%;
-  transition: transform 0.9s cubic-bezier(0.52, 0.01, 0.16, 1),
-    background 0.26s linear;
-  transform: rotate(0deg);
-}
-
 .rotatedAnchor {
   margin-top: 4rem;
 }
 
-.rotatedAnchor svg {
+.rotatedAnchor img,
+.s2 .link__hover {
   position: absolute;
   width: 135px;
-  fill: white;
   transform: translateX(-50%);
+  mix-blend-mode: difference;
+}
+
+.s2 .link__hover {
+  height: 110px;
+  width: 110px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(0.6, 0, 0.3, 1);
+  transform: translate(-50%, 12px) scale(0);
+}
+
+.rotatedAnchor:hover .link__hover {
+  transform: translate(-50%, 12px) scale(1);
 }
