@@ -6,7 +6,7 @@ new fullpage("#fullpage", {
   navigationPosition: "left",
   fixedElements: ".background",
   scrollingSpeed: 1300,
-  easingcss3: "cubic-bezier(.60,0,.30,1)",
+  easingcss3: "cubic-bezier(.70,0,.30,1)",
   anchors: ["first", "second", "third", "fourth"],
   credits: { enabled: false },
 

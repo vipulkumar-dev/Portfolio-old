@@ -1,13 +1,15 @@
+@font-face {
+  font-family: "futuramedium";
+  src: url("../font/futura-med-webfont.woff2") format("woff2"),
+    url("../font/futura-med-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --blue: #38d1f1;
-  --green: #04bf0c;
-  --orange: #ffa543;
-  --red: #ec4343;
-  --purple: #8c44d9;
-  --secondary-color: #2e5bdc;
-  --primary-color: #5a82f1;
-  --text-color: #212121;
-  --white: #fff;
+  --primary-color: #fcdf3e;
+  --text-color: hsl(0, 0%, 8%);
+  --background-color: #f9f9f9;
 }
 
 html {
@@ -23,7 +25,7 @@ html body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space Mono", monospace;
+  font-family: "futuramedium", monospace;
   color: var(--text-color);
 }
 

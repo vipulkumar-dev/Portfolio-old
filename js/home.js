@@ -13,65 +13,76 @@ const up = document.querySelectorAll(".up");
 
 anim.addEventListener("complete", function () {
   setTimeout(() => {
-    introContainer.style.transform = "translate(0%, -120%)";
+    introContainer.style.transform = "translate(0%, -100%)";
 
-    up.forEach((element) => {
-      element.classList.toggle("active");
-    });
     // gsap.fromTo(
     //   ".up",
-    //   { y: 500 },
+    //   { y: 500() },
     //   {
     //     duration: 1.5,
     //     y: 0,
-    //     delay: 0.4,
+    //     delay: 0.3,
     //     ease: CustomEase.create("custom", "M0,0,C0.702,0,0,1,1,1"),
     //   }
     // );
+
+    // gsap.from(".up", {
+    //   y: 500,
+    //   duration: 1.5,
+    //   delay: 0.3,
+    //   ease: CustomEase.create("custom", "M0,0,C0.702,0,0,1,1,1"),
+    // });
+
+    anime({
+      targets: `.up`,
+      translateY: ["400px", 0],
+      easing: "cubicBezier(.7,0,0,1)",
+      duration: 1500,
+      delay: 250,
+    });
+
+    anime({
+      targets: `.home__hero`,
+      scale: [1, 0.9],
+      easing: "cubicBezier(.8,0,0,1)",
+      duration: 1500,
+      delay: 1500,
+    });
+
+    anime({
+      targets: `.menuup`,
+      translateY: ["100px", 0],
+      opacity: [0, 1],
+      easing: "cubicBezier(.8,0,0,1)",
+      duration: 1500,
+      delay: 1500,
+    });
   }, 300);
 });
 
-const menuButton = document.querySelector(".menu");
-const roundBG = document.querySelector(".roundBG");
-const ul = document.querySelector(".nav__container .nav__bar .menu ul");
+gsap.to(".circulerText", {
+  scrollTrigger: {
+    trigger: ".circulerText",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 1,
+  },
+  rotate: 720,
+});
 
-let menuIstrue = true;
-
-menuButton.addEventListener("click", () => {
-  console.log("!");
-  menuButton.classList.toggle("active");
-  roundBG.classList.toggle("active");
-  ul.classList.toggle("active");
-
-  if (menuIstrue == true) {
-    gsap.fromTo(
-      ".nav__link",
-      { x: 300, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        stagger: 0.04,
-        delay: 0.4,
+gsap.to(".home__hero", {
+  scrollTrigger: {
+    trigger: ".s2",
+    start: "top bottom",
+    end: "bottom top",
+    pin: ".home__hero",
+    pinSpacing: false,
+    markers: true,
+    onUpdate: (self) => {
+      if (self.progress >= 1) {
+        console.log("progress", self.progress);
       }
-    );
-
-    menuIstrue = false;
-  } else {
-    gsap.fromTo(
-      ".nav__link",
-      {
-        x: 0,
-        opacity: 1,
-      },
-      {
-        x: 300,
-        duration: 0,
-        opacity: 0,
-        stagger: 0.07,
-        delay: 0.4,
-      }
-    );
-
-    menuIstrue = true;
-  }
+    },
+    // scrub: true,
+  },
 });

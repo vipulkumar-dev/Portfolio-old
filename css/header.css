@@ -4,6 +4,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  /* display: none; */
 }
 
 .nav__container .nav__bar {
@@ -20,7 +21,13 @@
 .nav__container .nav__bar .logo {
   width: 50px;
   height: 10px;
-  background-color: var(--text-color);
+}
+
+.nav__container .nav__bar .logo svg {
+  position: absolute;
+  width: 30px;
+  fill: var(--text-color);
+  transform: translateY(-42%);
 }
 
 .nav__container .nav__bar ul {
@@ -96,23 +103,68 @@
   transform: translate(50%, -50%) scale(2);
 }
 
-.nav__container .nav__bar .menu ul {
+/* .nav__container .nav__bar .menu ul {
   position: fixed;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
   flex-direction: column;
   pointer-events: none;
-  visibility: none;
+  visibility: hidden;
+}
+
+.nav__container .nav__bar .menu ul.active {
+  pointer-events: initial;
+  visibility: initial;
 }
 
 .nav__container .nav__bar .menu ul li a {
   display: block;
   font-size: 7rem;
   opacity: 0;
+} */
+
+.nav__container .gyu {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  flex-direction: column;
+  pointer-events: none;
+  visibility: hidden;
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
 }
 
-.nav__container .nav__bar .menu ul.active {
+.nav__container .gyu.active {
   pointer-events: initial;
   visibility: initial;
+}
+
+.nav__container .gyu .nav__link {
+  display: block;
+  font-size: 7rem;
+  opacity: 0;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .nav__container .nav__bar > ul {
+    height: 28px;
+  }
+  .nav__container .nav__bar ul .nav__item.menu {
+    display: block;
+  }
+
+  .nav__container .nav__bar ul .nav__item {
+    display: none;
+  }
+
+  .menu .roundBG {
+    width: 400vw;
+    height: 400vw;
+  }
 }
