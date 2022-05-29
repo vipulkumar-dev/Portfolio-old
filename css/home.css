@@ -33,7 +33,6 @@ html {
 }
 
 html body {
-  background-color: 000;
   background-color: var(--background-color);
   min-height: 300vh;
 }
@@ -60,7 +59,7 @@ html body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .home__starteranimation .animation__container {
@@ -165,11 +164,6 @@ html body {
 }
 
 @media screen and (max-width: 400px) {
-  .home__hero .row {
-    flex-direction: column;
-    gap: 4rem;
-  }
-
   .home__hero .large {
     font-size: clamp(5rem, 20vw, 50rem);
     line-height: 0.8em;
@@ -197,9 +191,8 @@ html body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60.5%;
-  height: 50vh;
   margin: 0 auto;
+  max-width: 730px;
 }
 
 .s2 h3 {
@@ -228,7 +221,6 @@ html body {
   font-size: 4rem;
   line-height: 48px;
   text-align: center;
-  max-width: 800px;
   width: 90%;
 }
 
@@ -238,9 +230,7 @@ html body {
   line-height: 27.2px;
   letter-spacing: -0.32px;
   text-align: center;
-  width: 80%;
-
-  /* font-weight: 400; */
+  width: 75%;
 }
 
 .rotatedAnchor {
@@ -260,10 +250,61 @@ html body {
   width: 110px;
   background-color: var(--text-color);
   border-radius: 50%;
-  transition: transform 0.5s cubic-bezier(0.6, 0, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0.7, 1);
   transform: translate(-50%, 12px) scale(0);
 }
 
 .rotatedAnchor:hover .link__hover {
   transform: translate(-50%, 12px) scale(1);
+}
+
+/* hr  */
+
+hr {
+  margin-inline: 100px;
+  margin-top: 200px;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  opacity: 25%;
+}
+
+/* section 3 */
+.s3 {
+  padding: 4rem;
+}
+.s3 .line {
+  overflow: hidden;
+}
+
+.s3 h3 {
+  font-size: clamp(22px, 5vw, 70px);
+}
+
+.s3 .imagewrappper {
+  width: 70%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.s3 .imagewrappper img {
+  width: 100%;
+  object-fit: cover;
+  /* transform: scale(1.5); */
+  /* transition: transform 0.4s cubic-bezier(0.8, 0, 0.4, 1); */
+}
+
+.s3 .imagewrappper div {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  transition: top 0.6s cubic-bezier(0.5, 0, 1, 1);
+}
+
+.s3 .imagewrappper.active div {
+  top: 100%;
 }

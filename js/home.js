@@ -93,7 +93,7 @@ gsap.to(".home__hero", {
     end: "bottom top",
     pin: ".home__hero",
     pinSpacing: false,
-    markers: true,
+    // markers: true,
     onUpdate: (self) => {
       if (self.progress >= 0.15) {
         home__hero.classList.add("active");
@@ -102,4 +102,21 @@ gsap.to(".home__hero", {
       }
     },
   },
+});
+
+gsap.from(".line h3", {
+  scrollTrigger: {
+    trigger: ".line ",
+    start: "top center",
+    end: "bottom top",
+    markers: true,
+    onEnter: () => {
+      document.querySelector(".imagewrappper").classList.add("active");
+      // document.querySelector(".image img").style.transform = "scale(1)";
+    },
+  },
+  y: 300,
+  skewY: 10,
+  stagger: 0.2,
+  ease: CustomEase.create("custom", "M0,0,C0.322,0,0,1,1,1"),
 });
