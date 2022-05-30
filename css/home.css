@@ -158,12 +158,12 @@ html body {
 
 @media screen and (max-width: 400px) {
   .home__hero .large {
-    font-size: clamp(5rem, 20vw, 50rem);
+    font-size: clamp(3rem, 15vw, 50rem);
     line-height: 0.8em;
   }
 
   .home__hero .small {
-    font-size: clamp(5rem, 15vw, 30rem);
+    font-size: clamp(2rem, 12vw, 30rem);
     line-height: 0.8em;
   }
 }
