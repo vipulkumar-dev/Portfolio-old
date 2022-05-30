@@ -108,7 +108,7 @@ gsap.from(".proj1 .line h3", {
   scrollTrigger: {
     trigger: ".proj1 .line ",
     start: "top center",
-    end: "bottom top",
+    end: "bottom 70%",
 
     onEnter: () => {
       document.querySelector(".proj1 .imagewrappper").classList.add("active");
@@ -125,7 +125,7 @@ gsap.from(".proj1 .line h3", {
 gsap.from(".proj2 .line h3", {
   scrollTrigger: {
     trigger: ".proj2 .line ",
-    start: "top center",
+    start: "top 70%",
     end: "bottom top",
 
     onEnter: () => {
