@@ -95,7 +95,7 @@ gsap.to(".home__hero", {
     pinSpacing: false,
     // markers: true,
     onUpdate: (self) => {
-      if (self.progress >= 0.15) {
+      if (self.progress >= 0.09) {
         home__hero.classList.add("active");
       } else {
         home__hero.classList.remove("active");
@@ -104,19 +104,38 @@ gsap.to(".home__hero", {
   },
 });
 
-gsap.from(".line h3", {
+gsap.from(".proj1 .line h3", {
   scrollTrigger: {
-    trigger: ".line ",
+    trigger: ".proj1 .line ",
     start: "top center",
     end: "bottom top",
-    markers: true,
+
     onEnter: () => {
-      document.querySelector(".imagewrappper").classList.add("active");
+      document.querySelector(".proj1 .imagewrappper").classList.add("active");
       // document.querySelector(".image img").style.transform = "scale(1)";
     },
   },
   y: 300,
   skewY: 10,
   stagger: 0.2,
-  ease: CustomEase.create("custom", "M0,0,C0.322,0,0,1,1,1"),
+  duration: 0.9,
+  ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
+});
+
+gsap.from(".proj2 .line h3", {
+  scrollTrigger: {
+    trigger: ".proj2 .line ",
+    start: "top center",
+    end: "bottom top",
+
+    onEnter: () => {
+      document.querySelector(".proj2 .imagewrappper").classList.add("active");
+      // document.querySelector(".image img").style.transform = "scale(1)";
+    },
+  },
+  y: 300,
+  skewY: 10,
+  stagger: 0.2,
+  duration: 0.9,
+  ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
 });
