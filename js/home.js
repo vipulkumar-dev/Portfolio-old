@@ -6,7 +6,7 @@ const anim = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "../bodymovin/data.json", // the path to the animation json
+  path: "/bodymovin/data.json", // the path to the animation json
 });
 
 const up = document.querySelectorAll(".up");
