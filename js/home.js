@@ -6,7 +6,7 @@ const anim = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "https://xcode319.github.io/Portfolio/bodymovin/data.json", // the path to the animation json
+  path: "https://dev-codemax.github.io/Portfolio/bodymovin/data.json", // the path to the animation json
 });
 
 const up = document.querySelectorAll(".up");
