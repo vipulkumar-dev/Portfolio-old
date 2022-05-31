@@ -184,7 +184,7 @@ html body {
   }
 
   .image {
-    aspect-ratio: 16/9;
+    aspect-ratio: 16/12;
     width: 80%;
     height: revert;
     margin: auto 10%;
