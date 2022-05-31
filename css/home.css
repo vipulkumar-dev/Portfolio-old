@@ -359,3 +359,49 @@ hr {
 .s3 .imagewrappper:hover .image {
   transform: scale(1.1);
 }
+
+.s3 .buttonWrappper {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin-right: auto;
+}
+
+.s3 .seeAllButton {
+  padding: 1.5rem 3rem;
+  font-size: 4rem;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.s3 .arrowHolder {
+  font-size: 4rem;
+  width: 0px;
+  height: 70px;
+  border: 2px solid var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: width 0.7s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.s3 .arrowHolder svg {
+  fill: var(--text-color);
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.arrowHolder.first {
+  width: 70px;
+}
+
+.buttonWrappper:hover .first {
+  width: 0px !important;
+}
+
+.buttonWrappper:hover .last {
+  width: 70px !important;
+}
