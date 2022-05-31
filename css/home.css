@@ -391,7 +391,6 @@ hr {
   fill: var(--text-color);
   width: 30px;
   height: 30px;
-  margin: 0 auto;
 }
 
 .arrowHolder.first {
@@ -404,4 +403,30 @@ hr {
 
 .buttonWrappper:hover .last {
   width: 70px !important;
+}
+
+@media screen and (max-width: 400px) {
+  .s3 .seeAllButton {
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+  }
+  .s3 .arrowHolder {
+    width: 0px;
+    height: 40px;
+  }
+  .s3 .arrowHolder svg {
+    width: 20px;
+    height: 20px;
+  }
+  .arrowHolder.first {
+    width: 40px;
+  }
+
+  .buttonWrappper:hover .first {
+    width: 0px !important;
+  }
+
+  .buttonWrappper:hover .last {
+    width: 40px !important;
+  }
 }
