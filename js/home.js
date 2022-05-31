@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const introContainer = document.querySelector("#intro");
 const animation__container = document.querySelector("#logo_animation");
 

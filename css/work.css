@@ -176,7 +176,6 @@ html body {
 
 @media screen and (max-width: 600px) {
   .fullpage__slide {
-    display: block;
     height: 100%;
     position: absolute;
     top: 0;
@@ -185,10 +184,11 @@ html body {
   }
 
   .image {
+    aspect-ratio: 16/9;
     width: 80%;
-    height: 55.633%;
-    margin: 0 10%;
-    top: 9.859%;
+    height: revert;
+    margin: auto 10%;
+    top: -37px;
   }
 
   .title {
