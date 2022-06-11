@@ -201,13 +201,17 @@ html body {
   content: "";
   position: absolute;
   left: 50%;
-  width: 24px;
+  width: 0px;
   height: 7px;
   margin: -3.5px 0 0 -12px;
-  transition: 0.72s cubic-bezier(0.52, 0.01, 0.16, 1);
+  transition: width 1 cubic-bezier(1, 0, 0.29, 1);
   transform: skewY(-16deg) scaleX(1) translateY(30px);
   transform-origin: 0 100%;
   background-color: var(--text-color);
+}
+
+.s2 h3.active::after {
+  width: 24px;
 }
 
 .s2 h2 {
@@ -216,6 +220,7 @@ html body {
   line-height: 48px;
   text-align: center;
   width: 90%;
+  overflow: hidden;
 }
 
 .rotatedAnchor {

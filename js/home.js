@@ -141,3 +141,10 @@ gsap.from(".proj2 .line h3", {
   duration: 0.9,
   ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
 });
+
+ScrollTrigger.create({
+  trigger: ".contact__content h3",
+  onEnter: () => {
+    document.querySelector(".contact__content h3").classList.add("active");
+  },
+});
