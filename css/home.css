@@ -419,15 +419,16 @@ hr {
     width: 20px;
     height: 20px;
   }
-  .arrowHolder.first {
+  .arrowHolder.last {
     width: 40px;
   }
-
+  
   .buttonWrappper:hover .first {
-    width: 0px !important;
+    width: 40px !important;
   }
 
   .buttonWrappper:hover .last {
-    width: 40px !important;
+    width: 0px !important;
   }
+
 }
