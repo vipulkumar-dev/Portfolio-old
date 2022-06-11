@@ -25,9 +25,9 @@
 
 .nav__container .nav__bar .logo svg {
   position: absolute;
-  width: 30px;
-  fill: var(--text-color);
-  transform: translateY(-42%);
+    width: 44px;
+    fill: var(--text-color);
+    transform: translateY(-40%);
 }
 
 .nav__container .nav__bar ul {

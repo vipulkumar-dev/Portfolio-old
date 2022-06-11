@@ -393,16 +393,16 @@ hr {
   height: 30px;
 }
 
-.arrowHolder.first {
+.arrowHolder.last {
   width: 70px;
 }
 
 .buttonWrappper:hover .first {
-  width: 0px !important;
+  width: 70px !important;
 }
 
 .buttonWrappper:hover .last {
-  width: 70px !important;
+  width: 0px !important;
 }
 
 @media screen and (max-width: 400px) {
