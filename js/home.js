@@ -93,7 +93,7 @@ gsap.to(".home__hero", {
     trigger: ".s2",
     start: "top bottom",
     end: "bottom top",
-    pin: ".home__hero",
+    // pin: ".home__hero",
     pinSpacing: false,
     // markers: true,
     onUpdate: (self) => {
