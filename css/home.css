@@ -189,8 +189,8 @@ html body {
   max-width: 730px;
 }
 
-.s2 h3 {
-  font-size: 1.1rem;
+.s2 .contact__content h3 {
+  font-size: 1.3rem;
   letter-spacing: 1.32px;
   line-height: 13.32px;
   text-align: center;
@@ -216,15 +216,6 @@ html body {
   line-height: 48px;
   text-align: center;
   width: 90%;
-}
-
-.s2 p {
-  margin-top: 2.1rem;
-  font-size: 1.6rem;
-  line-height: 27.2px;
-  letter-spacing: -0.32px;
-  text-align: center;
-  width: 75%;
 }
 
 .rotatedAnchor {
@@ -329,6 +320,12 @@ hr {
   max-width: 960px;
 }
 
+@media screen and (max-width: 600px) {
+  .s3 .imagewrappper {
+    width: 85%;
+  }
+}
+
 .s3 .imagewrappper img {
   display: block;
   width: 100%;
@@ -422,7 +419,7 @@ hr {
   .arrowHolder.last {
     width: 40px;
   }
-  
+
   .buttonWrappper:hover .first {
     width: 40px !important;
   }
@@ -430,5 +427,4 @@ hr {
   .buttonWrappper:hover .last {
     width: 0px !important;
   }
-
 }
