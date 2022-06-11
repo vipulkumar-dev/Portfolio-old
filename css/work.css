@@ -184,11 +184,12 @@ html body {
   }
 
   .image {
+    position: absolute;
     aspect-ratio: 16/12;
     width: 80%;
     height: revert;
     margin: auto 10%;
-    top: -45px;
+    top: 118px;
   }
 
   .title {
