@@ -106,6 +106,16 @@ gsap.to(".home__hero", {
   },
 });
 
+// anime({
+//   targets: `.s3 .s3__title svg`,
+//   translateX: ["-170%", "-170%"],
+//   translateY: ["80%", "120%"],
+//   duration: 800,
+//   direction: "alternate",
+//   loop: true,
+//   easing: "easeOutInCubic",
+// });
+
 gsap.from(".proj1 .line h3", {
   scrollTrigger: {
     trigger: ".proj1 .line ",

@@ -280,6 +280,15 @@ hr {
   padding: 6rem 4vw;
 }
 
+/* @keyframes example {
+  from {
+    transform: translate(-170%, 80%);
+  }
+  to {
+    transform: translate(-170%, 120%);
+  }
+} */
+
 .s3 .s3__title {
   font-size: clamp(24px, 7vw, 85px);
   text-align: center;
@@ -303,6 +312,9 @@ hr {
   top: 0;
   left: 0;
   transform: translate(-170%, 100%);
+  /* animation-name: example;
+  animation-duration: 4s;
+  animation-direction: alternate; */
 }
 
 .s3 .line {
