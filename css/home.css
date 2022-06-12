@@ -95,6 +95,10 @@ html body {
   padding: 4rem;
 }
 
+.home__hero.content {
+  position: fixed;
+}
+
 .home__hero .row {
   overflow: hidden;
 }
