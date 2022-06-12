@@ -56,7 +56,7 @@ anim.addEventListener("complete", function () {
 
     anime({
       targets: `.menuup`,
-      translateY: ["100px", 0],
+      translateY: ["70px", 0],
       opacity: [0, 1],
       easing: "cubicBezier(.8,0,0,1)",
       duration: 1500,
@@ -93,7 +93,7 @@ gsap.to(".home__hero", {
     trigger: ".s2",
     start: "top bottom",
     end: "bottom top",
-    // pin: ".home__hero",
+    pin: ".home__hero",
     pinSpacing: false,
     // markers: true,
     onUpdate: (self) => {
