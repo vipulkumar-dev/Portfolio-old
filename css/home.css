@@ -224,6 +224,9 @@ html body {
   font-size: clamp(24px, 5vw, 38px);
   line-height: 48px;
   text-align: center;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
   overflow: hidden;
 }
 
