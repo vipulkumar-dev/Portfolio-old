@@ -9,7 +9,7 @@
 
 .nav__container .nav__bar {
   width: 100%;
-  padding: 40px 40px 0;
+  padding: 40px 4vw 0;
 }
 
 .nav__container .nav__bar {
@@ -25,9 +25,9 @@
 
 .nav__container .nav__bar .logo svg {
   position: absolute;
-    width: 44px;
-    fill: var(--text-color);
-    transform: translateY(-40%);
+  width: 44px;
+  fill: var(--text-color);
+  transform: translateY(-40%);
 }
 
 .nav__container .nav__bar ul {
@@ -151,6 +151,20 @@
   text-align: center;
 }
 
+.nav__container .gyu .extra__links {
+  display: none;
+  margin-top: 30px;
+}
+
+.nav__container .gyu .extra__links a {
+  text-decoration: none;
+}
+
+.nav__container .gyu .extra__links svg {
+  width: 25px;
+  margin-right: 30px;
+}
+
 @media screen and (max-width: 500px) {
   .nav__container .nav__bar > ul {
     height: 28px;
@@ -166,5 +180,20 @@
   .menu .roundBG {
     width: 400vw;
     height: 400vw;
+  }
+
+  .nav__container .gyu {
+    transform: translate(0%, 0%);
+    left: 20px;
+    top: 125px;
+  }
+
+  .nav__container .gyu .extra__links {
+    display: block;
+  }
+
+  .nav__container .gyu .nav__link {
+    font-size: 3.6rem;
+    text-align: left;
   }
 }

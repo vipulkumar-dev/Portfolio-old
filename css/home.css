@@ -187,6 +187,7 @@ html body {
   align-items: center;
   margin: 0 auto;
   max-width: 730px;
+  padding: 0rem 4vw;
 }
 
 .s2 .contact__content h3 {
@@ -219,7 +220,6 @@ html body {
   font-size: clamp(24px, 5vw, 40px);
   line-height: 48px;
   text-align: center;
-  width: 90%;
   overflow: hidden;
 }
 

@@ -12,12 +12,14 @@ menuButton.addEventListener("click", () => {
   if (menuIstrue == true) {
     gsap.fromTo(
       ".nav__link",
-      { x: 300, opacity: 0 },
+      { x: 200, opacity: 0 },
       {
         x: 0,
         opacity: 1,
         stagger: 0.04,
         delay: 0.4,
+        ease: CustomEase.create("custom", "M0,0,C0.464,0,0,1,1,1"),
+        duration: 1.3,
       }
     );
 
@@ -33,7 +35,7 @@ menuButton.addEventListener("click", () => {
         x: 300,
         duration: 0,
         opacity: 0,
-        stagger: 0.07,
+        stagger: 0.04,
         delay: 0.4,
       }
     );
