@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
+const home__ele = document.querySelector(".home__hero");
+
+const home__height = home__ele.clientHeight;
+console.log(home__height);
+home__ele.style.height = `${home__height}px`;
+
 const introContainer = document.querySelector("#intro");
 const animation__container = document.querySelector("#logo_animation");
 
