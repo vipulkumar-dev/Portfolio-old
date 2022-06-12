@@ -19,7 +19,7 @@ menuButton.addEventListener("click", () => {
         stagger: 0.04,
         delay: 0.4,
         ease: CustomEase.create("custom", "M0,0,C0.464,0,0,1,1,1"),
-        duration: 1.3,
+        duration: 1.4,
       }
     );
 
