@@ -45,14 +45,20 @@ html body {
   color: var(--text-color);
 }
 
+*::selection {
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  -webkit-text-stroke-color: var(--background-color);
+}
+
 .home__starteranimation {
   position: fixed;
   left: 0;
   right: 0;
   width: 100%;
   height: 100vh;
-  transform: translate(0%, 0%);
-  /* transform: translate(0%, -120%); */
+  /* transform: translate(0%, 0%); */
+  transform: translate(0%, -120%);
   transition: transform 1.5s cubic-bezier(1, 0, 0.29, 1);
   background-color: var(--background-color);
 
@@ -192,7 +198,7 @@ html body {
   align-items: center;
   margin: 0 auto;
   max-width: 730px;
-  padding: 0rem 4vw;
+  padding: 1rem 4vw;
 }
 
 .s2 .contact__content h3 {
@@ -321,7 +327,7 @@ hr {
 
 @keyframes example {
   0% {
-    transform: translate(-170%, 80%);
+    transform: translate(-170%, 75%);
   }
   100% {
     transform: translate(-170%, 100%);
@@ -454,5 +460,79 @@ hr {
 
   .buttonWrappper:hover .last {
     width: 0px !important;
+  }
+}
+
+.s3__separater {
+  margin-top: 1rem;
+}
+/* section 4 */
+
+.s4 {
+  text-align: center;
+  padding: 0rem 4vw;
+}
+
+.s4 h3 {
+  font-size: clamp(24px, 5vw, 38px);
+  margin-top: 19.2rem;
+}
+
+.s4 .dot {
+  margin: 1.6rem 0rem 0.6rem;
+}
+
+.s4 .dot::after,
+.s4 .dot::before {
+  content: "";
+  background-color: var(--text-color);
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.7rem;
+  position: relative;
+  width: 0.7rem;
+  margin: 0.5rem;
+}
+
+.s4 a {
+  display: block;
+  font-size: clamp(24px, 7vw, 85px);
+  text-decoration: none;
+  -webkit-text-stroke: var(--text-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  margin-top: 5rem;
+  text-transform: uppercase;
+}
+
+.s4 .email__holder {
+  margin-top: 11.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-align: start;
+
+  margin-bottom: 6.5rem;
+}
+
+.s4 .email {
+  font-size: clamp(24px, 5vw, 38px);
+}
+
+@media screen and (max-width: 400px) {
+  .s4 {
+    text-align: left;
+  }
+
+  .s4 .email__holder {
+    flex-direction: column;
+  }
+
+  .s4 h3 {
+    margin-top: 5.2rem;
+  }
+
+  .s4 .email__holder {
+    margin-top: 5.6rem;
   }
 }
