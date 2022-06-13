@@ -124,9 +124,9 @@ gsap.to(".home__hero", {
 
 gsap.from(".proj1 .line h3", {
   scrollTrigger: {
-    trigger: ".proj1 .line ",
-    start: "top center",
-    end: "bottom 70%",
+    trigger: ".proj1 ",
+    start: "bottom bottom",
+    end: "bottom top",
 
     onEnter: () => {
       document.querySelector(".proj1 .imagewrappper").classList.add("active");
@@ -142,8 +142,8 @@ gsap.from(".proj1 .line h3", {
 
 gsap.from(".proj2 .line h3", {
   scrollTrigger: {
-    trigger: ".proj2 .line ",
-    start: "top 70%",
+    trigger: ".proj2",
+    start: "bottom bottom",
     end: "bottom top",
 
     onEnter: () => {
