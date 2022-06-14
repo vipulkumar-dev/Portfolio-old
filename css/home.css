@@ -348,7 +348,7 @@ hr {
 .s3 a {
   font-size: clamp(24px, 5vw, 70px);
   display: block;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .s3 .imagewrappper {
@@ -411,6 +411,7 @@ hr {
   background-color: var(--text-color);
   color: var(--background-color);
   text-decoration: none;
+  font-weight: 300;
 }
 
 .s3 .arrowHolder {
