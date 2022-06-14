@@ -227,7 +227,7 @@ html body {
 
 .s2 h2 {
   margin-top: 3.5rem;
-  font-size: clamp(24px, 5vw, 38px);
+  font-size: clamp(20px, 5vw, 38px);
   line-height: 48px;
   text-align: center;
   display: -webkit-box;
@@ -294,7 +294,7 @@ hr {
 }
 
 .s3 .s3__title {
-  font-size: clamp(24px, 7vw, 85px);
+  font-size: clamp(26px, 7vw, 85px);
   text-align: center;
   position: relative;
   width: fit-content;
@@ -472,8 +472,19 @@ hr {
   padding: 0rem 4vw;
 }
 
+.s4 .title {
+  display: block;
+  font-size: clamp(26px, 7vw, 85px);
+  text-decoration: none;
+  -webkit-text-stroke: var(--text-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  margin-top: 7rem;
+  text-transform: uppercase;
+}
+
 .s4 h3 {
-  font-size: clamp(24px, 5vw, 38px);
+  font-size: clamp(20px, 5vw, 38px);
   margin-top: 7.2rem;
 }
 
@@ -491,17 +502,6 @@ hr {
   position: relative;
   width: 0.7rem;
   margin: 0.5rem;
-}
-
-.s4 .title {
-  display: block;
-  font-size: clamp(24px, 7vw, 85px);
-  text-decoration: none;
-  -webkit-text-stroke: var(--text-color);
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  margin-top: 7rem;
-  text-transform: uppercase;
 }
 
 .s4 .title .nostroke {
@@ -539,12 +539,7 @@ hr {
   justify-content: space-between;
   font-size: 1.5rem;
   text-align: start;
-
   margin-bottom: 6.5rem;
-}
-
-.s4 .email {
-  font-size: clamp(24px, 5vw, 38px);
 }
 
 @media screen and (max-width: 400px) {
@@ -553,7 +548,8 @@ hr {
   }
 
   .s4 .email__holder {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: 1rem;
   }
 
   .s4 h3 {
