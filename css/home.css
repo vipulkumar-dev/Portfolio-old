@@ -48,6 +48,7 @@ html body {
   color: var(--background-color);
   background-color: var(--primary-color);
   -webkit-text-stroke-color: var(--background-color);
+  -webkit-text-fill-color: var(--background-color);
 }
 
 .home__starteranimation {
@@ -60,7 +61,6 @@ html body {
   /* transform: translate(0%, -120%); */
   transition: transform 1.5s cubic-bezier(1, 0, 0.29, 1);
   background-color: var(--background-color);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -542,6 +542,11 @@ hr {
   margin-bottom: 6.5rem;
 }
 
+.s4 .email__holder a {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
 @media screen and (max-width: 400px) {
   .s4 {
     text-align: left;
@@ -549,11 +554,11 @@ hr {
 
   .s4 .email__holder {
     flex-direction: column-reverse;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .s4 h3 {
-    margin-top: 5.2rem;
+    margin-top: 2.2rem;
   }
 
   .s4 .email__holder {
