@@ -112,12 +112,14 @@ gsap.to(".home__hero", {
   },
 });
 
-ScrollTrigger.create({
-  trigger: ".contact__content h3",
-  onEnter: () => {
-    document.querySelector(".contact__content h3").classList.add("active");
-  },
-});
+// set to home hero .actiove
+
+// ScrollTrigger.create({
+//   trigger: ".contact__content h3",
+//   onEnter: () => {
+//     document.querySelector(".contact__content h3").classList.add("active");
+//   },
+// });
 
 gsap.from(".proj1 .line a", {
   scrollTrigger: {
