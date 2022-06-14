@@ -112,17 +112,14 @@ gsap.to(".home__hero", {
   },
 });
 
-// anime({
-//   targets: `.s3 .s3__title svg`,
-//   translateX: ["-170%", "-170%"],
-//   translateY: ["80%", "120%"],
-//   duration: 800,
-//   direction: "alternate",
-//   loop: true,
-//   easing: "easeOutInCubic",
-// });
+ScrollTrigger.create({
+  trigger: ".contact__content h3",
+  onEnter: () => {
+    document.querySelector(".contact__content h3").classList.add("active");
+  },
+});
 
-gsap.from(".proj1 .line h3", {
+gsap.from(".proj1 .line a", {
   scrollTrigger: {
     trigger: ".proj1 ",
     start: "bottom bottom",
@@ -140,7 +137,7 @@ gsap.from(".proj1 .line h3", {
   ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
 });
 
-gsap.from(".proj2 .line h3", {
+gsap.from(".proj2 .line a", {
   scrollTrigger: {
     trigger: ".proj2",
     start: "bottom bottom",
@@ -156,11 +153,4 @@ gsap.from(".proj2 .line h3", {
   stagger: 0.2,
   duration: 0.9,
   ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
-});
-
-ScrollTrigger.create({
-  trigger: ".contact__content h3",
-  onEnter: () => {
-    document.querySelector(".contact__content h3").classList.add("active");
-  },
 });
