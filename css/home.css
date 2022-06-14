@@ -34,7 +34,6 @@ html {
 
 html body {
   background-color: var(--background-color);
-  min-height: 300vh;
 }
 
 * {
@@ -475,7 +474,7 @@ hr {
 
 .s4 h3 {
   font-size: clamp(24px, 5vw, 38px);
-  margin-top: 19.2rem;
+  margin-top: 7.2rem;
 }
 
 .s4 .dot {
@@ -494,15 +493,44 @@ hr {
   margin: 0.5rem;
 }
 
-.s4 a {
+.s4 .title {
   display: block;
   font-size: clamp(24px, 7vw, 85px);
   text-decoration: none;
   -webkit-text-stroke: var(--text-color);
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 2px;
-  margin-top: 5rem;
+  -webkit-text-stroke-width: 1px;
+  margin-top: 7rem;
   text-transform: uppercase;
+}
+
+.s4 .title .nostroke {
+  -webkit-text-fill-color: var(--text-color);
+}
+
+.s4 .button {
+  display: block;
+  font-size: clamp(11px, 5vw, 38px);
+  text-decoration: none;
+  margin-top: 7rem;
+  background-color: var(--text-color);
+  color: var(--background-color);
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 0.3em;
+  padding-inline: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1vw;
+}
+
+.s4 svg {
+  width: clamp(11px, 4vw, 35px);
+  height: clamp(11px, 4vw, 35px);
+  fill: var(--background-color);
+  transform: rotate(45deg);
+  padding-top: 4px;
 }
 
 .s4 .email__holder {
@@ -534,5 +562,9 @@ hr {
 
   .s4 .email__holder {
     margin-top: 5.6rem;
+  }
+
+  .s4 .button {
+    margin-inline: 0 auto;
   }
 }
