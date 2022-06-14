@@ -348,6 +348,7 @@ hr {
 .s3 a {
   font-size: clamp(24px, 5vw, 70px);
   display: block;
+  font-weight: bolder;
 }
 
 .s3 .imagewrappper {
