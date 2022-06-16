@@ -163,7 +163,7 @@ a {
 .home__hero .row__two .image__wrapper {
   overflow: hidden;
   aspect-ratio: 1/1;
-  width: clamp(6rem, 10vw, 14rem);
+  width: clamp(6rem, 10vw, 13rem);
 }
 
 .home__hero .image__wrapper img {
