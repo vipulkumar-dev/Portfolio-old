@@ -102,14 +102,23 @@ a {
   flex-direction: column;
   text-align: center;
   padding: 4rem;
+  pointer-events: none;
 }
 
 .home__hero.content {
   position: fixed;
+  pointer-events: revert;
+}
+
+.home__hero .wrapper {
+  max-width: 802px;
 }
 
 .home__hero .row {
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .home__hero.active {
@@ -127,20 +136,14 @@ a {
 }
 
 .home__hero .large {
-  font-size: clamp(10rem, 15vw, 28rem);
+  font-size: clamp(10rem, 20vw, 28rem);
   line-height: 1em;
   letter-spacing: 6px;
 }
 
 .home__hero .small {
-  font-size: clamp(10rem, 11vw, 19.6rem);
+  font-size: clamp(8rem, 14.2vw, 19.6rem);
   line-height: 1em;
-}
-
-.home__hero .row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .home__hero .row__two .small {
@@ -153,16 +156,14 @@ a {
 
 .home__hero .row__one .image__wrapper {
   overflow: hidden;
-  width: 22%;
-  height: 135px;
-  margin-left: 5.7vw;
+  aspect-ratio: 1/1;
+  width: clamp(8rem, 13vw, 18.6rem);
 }
 
 .home__hero .row__two .image__wrapper {
   overflow: hidden;
-  aspect-ratio: 16/9;
-  width: calc(5vw + 50px);
-  margin-inline: 3.5vw;
+  aspect-ratio: 1/1;
+  width: clamp(6rem, 10vw, 14rem);
 }
 
 .home__hero .image__wrapper img {
@@ -180,6 +181,10 @@ a {
   .home__hero .small {
     font-size: clamp(2rem, 24vw, 30rem);
     line-height: 1.8em;
+  }
+
+  .home__hero .row__one .image__wrapper {
+    width: 17vw;
   }
 }
 
