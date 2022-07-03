@@ -159,7 +159,7 @@ a {
 
 .s2 {
   padding-inline: var(--padding);
-  padding-bottom: 180px;
+  padding-bottom: 5vw;
 }
 
 .s2 .grid {
@@ -167,13 +167,10 @@ a {
   height: 100%;
 }
 
-.mediam-heading.s {
-  margin-top: 10rem;
-}
-
 .mediam-heading {
   /* border-bottom: 3px solid #8c8c8c; */
-  margin-bottom: 10rem;
+  margin-bottom: 0.9em;
+  font-size: clamp(1px, 5.8vw, 110px);
 }
 
 .aheading__break {
@@ -201,7 +198,6 @@ a {
 
 .mediam-heading h3 {
   font-weight: 600;
-  font-size: 110px;
   padding-block: 0.82em;
   letter-spacing: -0.025em;
 }
@@ -213,8 +209,8 @@ a {
 .s2 p {
   font-style: normal;
   font-weight: 500;
-  font-size: 64px;
-  margin-block: 5.5rem;
+  font-size: clamp(15px, 3.4vw, 64px);
+  margin-block: 0.85em;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -222,28 +218,30 @@ a {
 }
 
 .rotatedAnchor {
-  margin-top: 4rem;
+  display: inline-block;
+  margin-top: 2vw;
   position: relative;
-  height: 135px;
+  width: clamp(25px, 10.3vw, 135px);
+  aspect-ratio: 1/1;
 }
 
 .rotatedAnchor img,
 .s2 .link__hover {
   position: absolute;
-  width: 135px;
+  width: 100%;
 }
 
 .s2 .link__hover {
-  height: 110px;
-  width: 110px;
+  height: 80%;
+  width: 80%;
   background-color: var(--primary-color);
   border-radius: 50%;
   transition: transform 0.5s cubic-bezier(0.5, 0, 0, 1);
-  transform: translate(12px, 12px) scale(0);
+  transform: translate(12%, 12%) scale(0);
 }
 
 .rotatedAnchor:hover .link__hover {
-  transform: translate(12px, 12px) scale(1);
+  transform: translate(12%, 12%) scale(1);
 }
 
 .s3 {
@@ -252,12 +250,9 @@ a {
   padding-bottom: 5rem;
   position: absolute;
   width: 100vw;
-  top: 937px;
   left: 0;
+  top: 100vh;
   z-index: 99999;
-  /* opacity: 0; */
-  /* transform: translateY(0vh); */
-
   transition: 0.8s;
   transform: rotate(0deg);
   pointer-events: revert;
@@ -265,7 +260,7 @@ a {
 }
 
 .s3.unactive {
-  top: 2000px;
+  top: 300vh;
   transform: rotate(7deg);
   pointer-events: none;
   visibility: hidden;
@@ -280,8 +275,15 @@ a {
 }
 
 .s3 .line {
+  position: relative;
   overflow: hidden;
   text-align: center;
+  transform: translateY(55%);
+  z-index: 2;
+}
+
+.s3 .line a {
+  font-family: "NeueMachina";
 }
 
 .s3 .proj {
@@ -315,7 +317,6 @@ a {
   display: block;
   width: 100%;
   object-fit: cover;
-  transform: scale(1.7);
   transition: transform 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
@@ -327,16 +328,7 @@ a {
   top: 0;
   left: 0;
   background-color: var(--text-color);
-  transition: top 0.8s cubic-bezier(0.5, 0, 0, 1);
   z-index: 1;
-}
-
-.s3 .imagewrappper.active .imagecolor {
-  top: 100%;
-}
-
-.s3 .imagewrappper.active .image {
-  transform: scale(1);
 }
 
 .s3 .imagewrappper:hover .image {

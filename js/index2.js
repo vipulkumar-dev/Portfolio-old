@@ -1,52 +1,18 @@
-// gsap.from(".proj1 .line a", {
-//   scrollTrigger: {
-//     trigger: ".proj1 ",
-//     start: "-=1000px",
-//     markers: true,
-//     onEnter: () => {
-//       document.querySelector(".proj1 .imagewrappper").classList.add("active");
-//       // document.querySelector(".image img").style.transform = "scale(1)";
-//     },
-//   },
-//   y: 300,
-//   skewY: 10,
-//   stagger: 0.2,
-//   duration: 0.9,
-//   ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
-// });
-
-// gsap.from(".proj2 .line a", {
-//   scrollTrigger: {
-//     trigger: ".proj2",
-//     start: "bottom bottom",
-//     end: "bottom top",
-
-//     onEnter: () => {
-//       document.querySelector(".proj2 .imagewrappper").classList.add("active");
-//       // document.querySelector(".image img").style.transform = "scale(1)";
-//     },
-//   },
-//   y: 300,
-//   skewY: 10,
-//   stagger: 0.2,
-//   duration: 0.9,
-//   ease: CustomEase.create("custom", "M0,0 C0.322,0 0,1 1,1 "),
-// });
-
 const s1 = document.querySelector(".s1");
 const s1Height = s1.clientHeight;
 
 const s3 = document.querySelector(".s3");
 
-s3.style.top = "s1Height";
+// s3.style.top = "s1Height";
 
 gsap.from(".s3", {
   scrollTrigger: {
     trigger: ".s2",
-    start: "top top",
-    end: "bottom top",
+    start: "bottom bottom",
+    end: "top top",
+    markers: true,
     onUpdate: (self) => {
-      if (self.progress >= 0.01) {
+      if (self.progress >= 0.001) {
         s3.classList.remove("unactive");
       } else {
         s3.classList.add("unactive");
