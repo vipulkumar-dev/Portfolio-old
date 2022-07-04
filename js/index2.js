@@ -10,7 +10,7 @@ gsap.from(".s3", {
     trigger: ".s2",
     start: "bottom bottom",
     end: "top top",
-    markers: true,
+    // markers: true,
     onUpdate: (self) => {
       if (self.progress >= 0.001) {
         s3.classList.remove("unactive");
