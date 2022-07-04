@@ -110,6 +110,12 @@ a {
   pointer-events: revert;
 }
 
+.home__hero.active {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.85) !important;
+}
+
 .home__hero .wrapper {
   max-width: 802px;
 }
@@ -119,12 +125,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.home__hero.active {
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(0.85) !important;
 }
 
 .home__hero .row .large {

@@ -1,9 +1,4 @@
-const s1 = document.querySelector(".s1");
-const s1Height = s1.clientHeight;
-
 const s3 = document.querySelector(".s3");
-
-// s3.style.top = "s1Height";
 
 gsap.from(".s3", {
   scrollTrigger: {
@@ -24,7 +19,7 @@ gsap.from(".s3", {
         document.querySelector(".sheading__break").classList.add("active");
 
         let tlsheading__anim1 = gsap.timeline({
-          delay: 0.5,
+          delay: 1,
         });
 
         tlsheading__anim1
@@ -58,7 +53,7 @@ gsap.from(".s3", {
         //
         //
         let tlsheading__anim2 = gsap.timeline({
-          delay: 0.6,
+          delay: 1.1,
         });
 
         tlsheading__anim2

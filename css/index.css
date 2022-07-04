@@ -74,6 +74,7 @@ a {
   padding-inline: var(--padding);
   margin-bottom: 20px;
   position: relative;
+  opacity: 1;
 }
 
 .s1 .left {
@@ -206,67 +207,72 @@ a {
   display: inline-block;
 }
 
+/* section 2  */
+
 .s2 {
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--background-color);
+}
+
+.s2 .image {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
+}
+
+.s2 .image img {
+  width: 30%;
 }
 
 .s2 .contact__content {
   z-index: 7;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   max-width: 730px;
-  padding: 1rem 4vw;
+  padding: 1rem 0;
 }
 
 .s2 .contact__content h3 {
-  font-size: 1.3rem;
+  font-size: calc(2rem + 0.3vw);
   letter-spacing: 1.32px;
   line-height: 13.32px;
-  text-align: center;
+  text-align: left;
+  font-weight: 600;
   /* font-weight: 400; */
 }
 
 .s2 h3::after {
   content: "";
   position: absolute;
-  left: 50%;
   width: 0px;
   height: 7px;
   margin: -3.5px 0 0 -12px;
   transition: width 0.5s cubic-bezier(0.6, 0, 0, 1) 0.8s;
-  transform: skewY(-16deg) scaleX(1) translateY(30px);
+  transform: skewY(-10deg) scaleX(1) translate(-2.7em, 19px);
   transform-origin: 0 100%;
   background-color: var(--text-color);
 }
 
-.home__hero.active ~ .s2 h3::after {
+.s2 h3.active::after {
   width: 24px;
 }
 
 .s2 h2 {
   margin-top: 3.5rem;
-  font-size: clamp(20px, 5vw, 38px);
+  font-size: clamp(22px, 2vw, 28px);
   line-height: 48px;
-  text-align: center;
+  text-align: left;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   overflow: hidden;
   font-weight: 400;
 }
 
 .rotatedAnchor {
   display: inline-block;
-  margin-top: 2vw;
+  margin-top: calc(2vw + 1.5rem);
   position: relative;
-  width: clamp(80px, 10.3vw, 120px);
+  width: clamp(80px, 10.3vw, 100px);
   aspect-ratio: 1/1;
 }
 
@@ -289,39 +295,34 @@ a {
   transform: translate(12%, 12%) scale(1);
 }
 
-.s3 {
-  position: relative;
-  width: 100vw;
-  left: 0;
-  top: -100vh;
-  z-index: 99999;
-  transition: 0.8s;
-  /* transform: translateY(-100vh) rotate(0deg); */
-  pointer-events: revert;
-  visibility: revert;
-  overflow-x: hidden;
+@media screen and (max-width: 800px) {
+  .s2 {
+    grid-template-columns: 1fr;
+  }
+
+  .s2 .image {
+    position: absolute;
+  }
 }
 
-.s3__wrraper {
-  transform: rotate(0deg);
-  transition: 0.8s;
+/* section 3 */
+
+.s3 {
+  width: 100vw;
+  left: 0;
+  z-index: 99999;
+  transition: 1.2s;
+  transform: translateY(-100vh);
+  position: absolute;
   background-color: var(--text-color);
-  width: 100%;
   padding-inline: var(--padding);
-  padding-bottom: 5rem;
-  padding-top: calc(5vh + 3rem);
+  padding-top: calc(5vh + 8rem);
 }
 
 .s3.unactive {
-  top: 50vh;
-  /* transform: translateY(50vh); */
-  pointer-events: none;
-  visibility: hidden;
+  transform: translateY(50vh);
 }
 
-.s3.unactive .s3__wrraper {
-  transform: rotate(15deg);
-}
 .s3 h3 {
   text-align: center;
 }
@@ -440,7 +441,7 @@ a {
 @media screen and (max-width: 400px) {
   .s3 .seeAllButton {
     padding: 1rem 1.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   .s3 .arrowHolder {
     width: 0px;
@@ -460,5 +461,156 @@ a {
 
   .buttonWrappper:hover .last {
     width: 0px !important;
+  }
+}
+
+/* section 4 */
+
+.s4 {
+  text-align: center;
+  background-color: var(--text-color);
+  padding-block: 1px;
+  overflow-x: hidden;
+}
+
+.s4 .title {
+  display: block;
+  font-size: clamp(26px, 10vw + 1rem, 85px);
+  text-decoration: none;
+  -webkit-text-stroke: var(--background-color);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  margin-top: calc(10vw + 3rem);
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-family: "NeueMachina";
+  text-align: center;
+  white-space: nowrap;
+  animation-name: example;
+  animation-duration: 30s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes example {
+  0% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-172%) rotate(-2deg);
+  }
+}
+
+.s4 h3 {
+  font-size: clamp(20px, 5vw, 38px);
+  margin-top: 7.2rem;
+  color: var(--background-color);
+}
+
+.s4 .dot {
+  margin: 1.6rem 0rem 0.6rem;
+}
+
+.s4 .dot::after,
+.s4 .dot::before {
+  content: "";
+  background-color: var(--background-color);
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.7rem;
+  position: relative;
+  width: 0.7rem;
+  margin: 0.5rem;
+}
+
+.s4 .title .nostroke {
+  -webkit-text-fill-color: var(--background-color);
+}
+
+.s4 .button {
+  display: block;
+  font-size: clamp(11px, 5vw, 38px);
+  text-decoration: none;
+  margin-top: 7rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 0.3em;
+  padding-inline: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1vw;
+}
+
+.s4 .button:hover svg {
+  transform: translate(0.2em, 0.2em) rotate(45deg);
+}
+.s4 svg {
+  width: clamp(11px, 4vw, 35px);
+  height: clamp(11px, 4vw, 35px);
+  fill: var(--text-color);
+  transform: translate(0, 0.2em) rotate(45deg);
+  padding-top: 4px;
+  transition: transform 0.3s;
+}
+
+.s4 .email__holder {
+  margin-top: 11.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-align: start;
+  margin-bottom: 6.5rem;
+}
+
+.s4 .email__holder .left div {
+  color: var(--background-color);
+}
+
+.s4 .email__holder .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.s4 .email__holder a {
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 15px;
+  color: var(--background-color);
+}
+
+@media screen and (max-width: 400px) {
+  .s4 {
+    text-align: left;
+  }
+
+  .s4 .title {
+    animation-duration: 20s;
+  }
+
+  .s4 .email__holder {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .s4 h3 {
+    margin-top: 2.2rem;
+    text-align: left;
+  }
+
+  .s4 .email__holder {
+    margin-top: 5.6rem;
+  }
+
+  .s4 .button {
+    margin-inline: 0 auto;
+  }
+
+  .s4 .email__holder .right {
+    display: block;
   }
 }
