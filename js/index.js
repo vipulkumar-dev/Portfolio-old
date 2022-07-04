@@ -6,13 +6,13 @@ lottie.loadAnimation({
   path: "../bodymovin/grid.json",
 });
 
-lottie.loadAnimation({
-  container: image, // the dom element that will contain the animation
-  renderer: "svg",
-  loop: false,
-  autoplay: true,
-  path: "../bodymovin/techlines.json",
-});
+// lottie.loadAnimation({
+//   container: image, // the dom element that will contain the animation
+//   renderer: "svg",
+//   loop: false,
+//   autoplay: true,
+//   path: "../bodymovin/techlines.json",
+// });
 
 // about me animation
 //
