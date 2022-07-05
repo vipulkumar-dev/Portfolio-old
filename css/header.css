@@ -53,35 +53,45 @@
   cursor: pointer;
 }
 
-.menu::before,
-.menu::after {
-  content: "";
-  width: 100%;
+.menu .circle {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transition: 0.3s;
+  transform: scale(1);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.menu .circle:hover {
+  transform: scale(1.2);
+}
+
+.menu .dot {
+  width: 3px;
   height: 3px;
-  background: var(--text-color);
+  background-color: var(--color-light);
+  border-radius: 50%;
+}
+
+.menu .line {
   position: absolute;
-  right: 0;
-  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -o-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 2px;
+  background-color: var(--color-light);
+  transform: translate(-50%, -50%) rotate(45deg);
+  display: none;
 }
 
-.menu::after {
-  top: 5px;
-  transform-origin: 15px 0px;
-}
-
-.menu.active::after {
-  transform: rotate(45deg);
-}
-
-.menu::before {
-  bottom: 5px;
-  transform-origin: 10px 0px;
-}
-
-.menu.active::before {
-  transform: rotate(-45deg);
+.menu .line.line2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .nav__container .nav__bar ul .nav__item a {

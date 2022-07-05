@@ -1,0 +1,79 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+.nav__bar {
+  padding-top: 40px;
+  padding-inline: 40px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__bar .logo {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.nav__bar .circle {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  transition: 0.3s;
+  transform: scale(1);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.nav__bar .circle:hover {
+  transform: scale(1.2);
+}
+
+.nav__bar .dot {
+  width: 3px;
+  height: 3px;
+  background-color: var(--color-light);
+  border-radius: 50%;
+}
+
+.nav__bar .line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 2px;
+  background-color: var(--color-light);
+  transform: translate(-50%, -50%) rotate(45deg);
+  display: none;
+}
+
+.nav__bar .line.line2 {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* 
+<header>
+<nav class="nav__bar">
+  <div class="left"><a href="" class="logo">Codemax</a></div>
+  <div class="right">
+    <div class="menu__button">
+      <div class="circle">
+        <div class="dot1 dot"></div>
+        <div class="dot2 dot"></div>
+        <div class="dot3 dot"></div>
+        <div class="line1 line"></div>
+        <div class="line2 line"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+</header> */
