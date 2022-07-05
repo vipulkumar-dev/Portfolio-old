@@ -6,10 +6,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "NeueMachina";
+  src: url("../font/NeueMachina-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  --primary-color: #fcdf3e;
-  --text-color: hsl(0, 0%, 8%);
-  --background-color: #f9f9f9;
+  --primary-color: #ff5252;
+  --text-color: #181818;
+  --color-light: #f9f6e7;
 }
 
 html {
@@ -17,21 +24,20 @@ html {
 }
 
 html body {
-  background-color: 000;
-  background-image: linear-gradient(180deg, #fff, #f4f6fb, #fff);
+  background-color: var(--color-light);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "futuramedium", monospace;
+  font-family: "NeueMachina", monospace;
   color: var(--text-color);
 }
 
 .background {
   font-size: 17vw;
-  color: hsl(0, 0%, 94%);
+  color: hsl(50, 61%, 92%);
   font-weight: 800;
   position: fixed;
   top: 50%;

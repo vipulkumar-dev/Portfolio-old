@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "rl-unnoregular";
-  src: url("../font/rl-unno-regular-webfont.woff2") format("woff2"),
-    url("../font/rl-unno-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "NeueMachina";
   src: url("../font/NeueMachina-Bold.woff2") format("woff2");
   font-weight: normal;
@@ -18,14 +10,6 @@
   src: url("../font/pppangramsans-medium-webfont.woff2") format("woff2"),
     url("../font/pppangramsans-medium-webfont.woff2") format("woff");
   font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "pppangramsans";
-  src: url("../font/pppangramsans-semibold-webfont.woff2") format("woff2"),
-    url("../font/pppangramsans-semibold-webfont.woff") format("woff");
-  font-weight: bold;
   font-style: normal;
 }
 
@@ -79,8 +63,8 @@ a {
 
 .s1 .small__heading {
   font-size: 12px;
-  margin-right: 150px;
-  margin-bottom: 250px;
+  margin-right: 284px;
+  margin-bottom: 362px;
   margin-top: 100px;
 }
 
@@ -98,7 +82,7 @@ a {
   position: absolute;
   left: var(--padding);
   bottom: 50px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .s1 .right {
@@ -116,30 +100,53 @@ a {
   z-index: 1;
   object-fit: cover;
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .s1 .svg {
   position: absolute;
+  z-index: 1;
 }
 
 .s1 .svg1 {
-  width: 100px;
-  /* right: 0; */
+  width: 17%;
+  right: 28%;
 }
 
 .s1 .svg2 {
-  width: 4%;
-  right: 6%;
-  top: 13%;
+  width: 12%;
+  right: 0;
+  top: 40%;
 }
 
 .s1 .svg3 {
-  width: 150px;
+  width: 18%;
   bottom: 0;
   left: 20%;
 }
 
-@media screen and (max-width: 1230px) {
+.s1 .svg4 {
+  width: 8%;
+  bottom: 19%;
+  right: 13%;
+  animation-name: down;
+  animation-duration: 1.3s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes down {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(20%);
+  }
+}
+
+/* @media screen and (max-width: 1230px) {
   .s1 {
     grid-template-columns: 1fr;
     justify-items: end;
@@ -148,11 +155,13 @@ a {
   .s1 .right {
     width: 50%;
   }
-}
+} */
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1230px) {
   .s1 {
     grid-template-rows: 1fr 1.3fr;
+    grid-template-columns: 1fr;
+
     padding-top: 60px;
     justify-items: center;
     align-items: center;
@@ -179,12 +188,17 @@ a {
     width: calc(50% + 120px);
     padding-block: 0;
     align-self: start;
+    max-width: 500px;
   }
 
   .s1 .right__image {
-    top: 25%;
+    top: 42%;
     aspect-ratio: 13 / 9;
     width: 86%;
+  }
+
+  .s1 .svg4 {
+    bottom: 14%;
   }
 }
 
@@ -204,19 +218,16 @@ a {
   font-size: clamp(35px, 5.8vw, 110px);
 }
 
-.aheading__break {
-  height: 3px;
-  background-color: #8c8c8c;
-  width: 0%;
-  transition: width 0.7s cubic-bezier(0.72, 0, 0.3, 1) 0.5s;
-}
-
 .sheading__break {
   height: 3px;
   background-color: #8c8c8c;
   width: 0%;
   margin-inline: auto;
   transition: width 0.7s cubic-bezier(0.72, 0, 0.3, 1) 0.5s;
+}
+
+.heading__anim {
+  font-family: "NeueMachina";
 }
 
 .aheading__break.active {
@@ -242,7 +253,6 @@ a {
 .s2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--color-light);
   position: relative;
 }
 
@@ -269,6 +279,8 @@ a {
   line-height: 13.32px;
   text-align: left;
   font-weight: 600;
+  font-family: "NeueMachina";
+
   /* font-weight: 400; */
 }
 
@@ -279,7 +291,7 @@ a {
   height: 7px;
   margin: -3.5px 0 0 -12px;
   transition: width 0.5s cubic-bezier(0.6, 0, 0, 1) 0.8s;
-  transform: skewY(-10deg) scaleX(1) translate(-2.7em, 19px);
+  transform: skewY(-10deg) scaleX(1) translate(-2.9em, 19px);
   transform-origin: 0 100%;
   background-color: var(--text-color);
 }
@@ -521,7 +533,7 @@ a {
   font-family: "NeueMachina";
   text-align: center;
   white-space: nowrap;
-  animation-name: example;
+  animation-name: contact;
   animation-duration: 30s;
   animation-direction: alternate;
   animation-fill-mode: forwards;
@@ -529,7 +541,7 @@ a {
   animation-timing-function: linear;
 }
 
-@keyframes example {
+@keyframes contact {
   0% {
     transform: translateX(-50%) rotate(-2deg);
   }
@@ -582,13 +594,13 @@ a {
 }
 
 .s4 .button:hover svg {
-  transform: translate(0.2em, 0.2em) rotate(45deg);
+  transform: translate(0.2em, 0.15em) rotate(45deg);
 }
 .s4 svg {
   width: clamp(11px, 4vw, 35px);
   height: clamp(11px, 4vw, 35px);
   fill: var(--text-color);
-  transform: translate(0, 0.2em) rotate(45deg);
+  transform: translate(0, 0.15em) rotate(45deg);
   padding-top: 4px;
   transition: transform 0.3s;
 }
