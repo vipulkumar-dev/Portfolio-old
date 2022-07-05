@@ -94,7 +94,7 @@ a {
 .s1 .right__image {
   position: absolute;
   left: -12%;
-  top: 50%;
+  top: 42%;
   aspect-ratio: 1 / 1;
   width: 69%;
   z-index: 1;
@@ -110,7 +110,7 @@ a {
 
 .s1 .svg1 {
   width: 17%;
-  right: 28%;
+  right: 23%;
 }
 
 .s1 .svg2 {
@@ -417,7 +417,7 @@ a {
   }
 }
 
-.s3 .imagewrappper img {
+.s3 .imagewrappper .image {
   display: block;
   width: 100%;
   object-fit: cover;
@@ -591,6 +591,7 @@ a {
   justify-content: center;
   align-content: center;
   gap: 1vw;
+  font-family: "NeueMachina";
 }
 
 .s4 .button:hover svg {
