@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "NeueMachina";
+  src: url("../font/NeueMachina-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pppangramsans";
+  src: url("../font/pppangramsans-medium-webfont.woff2") format("woff2"),
+    url("../font/pppangramsans-medium-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #ff5252;
+  --text-color: #181818;
+  --color-light: #f9f6e7;
+  --padding: clamp(1px, 4.5vw, 85px);
+}
+
+.logo svg .svg__color {
+  fill: var(--color-light) !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--text-color);
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "pppangramsans", sans-serif;
+  color: var(--text-color);
+}
+
+*::selection {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  -webkit-text-stroke-color: var(--text-color);
+  -webkit-text-fill-color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.s4 {
+  text-align: center;
+  background-color: var(--text-color);
+  padding-block: 1px;
+  overflow-x: hidden;
+  padding-inline: var(--padding);
+}
+
+.s4 .title {
+  display: block;
+  font-size: clamp(26px, 10vw + 1rem, 85px);
+  text-decoration: none;
+  -webkit-text-stroke: var(--color-light);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  margin-top: calc(10vw + 3rem);
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+  font-family: "NeueMachina";
+  text-align: center;
+  white-space: nowrap;
+  animation-name: contact;
+  animation-duration: 30s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes contact {
+  0% {
+    transform: translateX(-50%) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-172%) rotate(-2deg);
+  }
+}
+
+.s4 h3 {
+  font-size: clamp(20px, 5vw, 38px);
+  margin-top: 7.2rem;
+  color: var(--color-light);
+}
+
+.s4 .dot {
+  margin: 1.6rem 0rem 0.6rem;
+}
+
+.s4 .dot::after,
+.s4 .dot::before {
+  content: "";
+  background-color: var(--color-light);
+  border-radius: 50%;
+  display: inline-block;
+  height: 0.7rem;
+  position: relative;
+  width: 0.7rem;
+  margin: 0.5rem;
+}
+
+.s4 .title .nostroke {
+  -webkit-text-fill-color: var(--color-light);
+}
+
+.s4 .button {
+  display: block;
+  font-size: clamp(11px, 5vw, 38px);
+  text-decoration: none;
+  margin-top: 7rem;
+  background-color: var(--color-light);
+  color: var(--text-color);
+  width: fit-content;
+  margin-inline: auto;
+  padding-block: 0.3em;
+  padding-inline: 0.3em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1vw;
+}
+
+.s4 .button:hover svg {
+  transform: translate(0.2em, 0.15em) rotate(45deg);
+}
+.s4 svg {
+  width: clamp(11px, 4vw, 35px);
+  height: clamp(11px, 4vw, 35px);
+  fill: var(--text-color);
+  transform: translate(0, 0.15em) rotate(45deg);
+  padding-top: 4px;
+  transition: transform 0.3s;
+}
+
+.s4 .email__holder {
+  margin-top: 11.6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  text-align: start;
+  margin-bottom: 6.5rem;
+}
+
+.s4 .email__holder .left div {
+  color: var(--color-light);
+}
+
+.s4 .email__holder .right {
+  display: flex;
+  gap: 1rem;
+}
+
+.s4 .email__holder a {
+  text-decoration: none;
+  margin-right: 1rem;
+  font-size: 15px;
+  color: var(--color-light);
+}
+
+@media screen and (max-width: 400px) {
+  .s4 {
+    text-align: left;
+  }
+
+  .s4 .title {
+    animation-duration: 20s;
+  }
+
+  .s4 .email__holder {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .s4 h3 {
+    margin-top: 2.2rem;
+    text-align: left;
+  }
+
+  .s4 .email__holder {
+    margin-top: 5.6rem;
+  }
+
+  .s4 .button {
+    margin-inline: 0 auto;
+  }
+
+  .s4 .email__holder .right {
+    display: block;
+  }
+}
