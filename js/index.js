@@ -3,7 +3,7 @@ lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "../bodymovin/grid.json",
+  path: "https://dev-codemax.github.io/Portfolio//bodymovin/grid.json",
 });
 
 // lottie.loadAnimation({
