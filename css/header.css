@@ -25,7 +25,7 @@
 
 .nav__container .nav__bar .logo svg {
   position: absolute;
-  width: 45px;
+  width: 32px;
   fill: var(--text-color);
   transform: translateY(-40%);
 }
@@ -41,13 +41,13 @@
 }
 
 .nav__container .nav__bar ul .nav__item svg {
-  width: 25px;
-  height: 25px;
+  width: 22px;
+  height: 22px;
   color: var(--text-color);
 }
 
 .nav__container .nav__bar ul .nav__item.menu {
-  margin-left: 6.4rem;
+  margin-left: 3.4rem;
   position: relative;
   width: 46px;
   cursor: pointer;
@@ -90,19 +90,27 @@
   display: none;
 }
 
+.menu.active .dot {
+  display: none;
+}
+
+.menu.active .line {
+  display: block;
+}
+
 .menu .line.line2 {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .nav__container .nav__bar ul .nav__item a {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   text-decoration: none;
   color: var(--text-color);
 }
 
 .menu .roundBG {
   position: fixed;
-  background-color: var(--background-color);
+  background-color: var(--color-light);
   transform: translate(50%, -50%) scale(0);
   width: 200vw;
   height: 200vw;
