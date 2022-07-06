@@ -1,3 +1,17 @@
+gsap.fromTo(
+  ".heading__span",
+  {
+    yPercent: 120,
+  },
+  {
+    yPercent: 0,
+    duration: 0.7,
+    delay: 1,
+    stagger: 0.1,
+    ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
+  }
+);
+
 lottie.loadAnimation({
   container: grid, // the dom element that will contain the animation
   renderer: "svg",
@@ -5,19 +19,6 @@ lottie.loadAnimation({
   autoplay: true,
   path: "https://dev-codemax.github.io/Portfolio//bodymovin/grid.json",
 });
-
-// lottie.loadAnimation({
-//   container: image, // the dom element that will contain the animation
-//   renderer: "svg",
-//   loop: false,
-//   autoplay: true,
-//   path: "../bodymovin/techlines.json",
-// });
-
-// about me animation
-//
-//
-//
 
 gsap.to(".contact__content", {
   scrollTrigger: {

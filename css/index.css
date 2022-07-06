@@ -74,7 +74,6 @@ a {
 }
 
 .s1 .heading {
-  font-family: "NeueMachina";
   font-size: clamp(1px, 8.1vw + 20px, 180px);
   line-height: 108.5%;
   letter-spacing: 0.015em;
@@ -83,6 +82,16 @@ a {
   left: var(--padding);
   bottom: 50px;
   z-index: 3;
+}
+
+.s1 .heading div {
+  overflow: hidden;
+}
+
+.s1 .heading div span {
+  display: inline-block;
+  font-family: "NeueMachina";
+  /* transform: translate(0, 120%); */
 }
 
 .s1 .right {
