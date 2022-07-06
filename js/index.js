@@ -1,16 +1,69 @@
-gsap.fromTo(
-  ".heading__span",
-  {
-    yPercent: 120,
-  },
-  {
-    yPercent: 0,
-    duration: 0.7,
-    delay: 1,
-    stagger: 0.1,
-    ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
-  }
-);
+gsap.registerPlugin(ScrollTrigger);
+
+const introContainer = document.querySelector("#intro");
+
+const animation__container = document.querySelector("#logo_animation");
+
+const anim = lottie.loadAnimation({
+  container: animation__container, // the dom element that will contain the animation
+  renderer: "svg",
+  loop: false,
+  autoplay: true,
+  path: "https://dev-codemax.github.io/Portfolio/bodymovin/data.json",
+});
+
+anim.addEventListener("complete", function () {
+  setTimeout(() => {
+    introContainer.style.transform = "translate(0%, -100%)";
+    gsap.fromTo(
+      ".heading__span",
+      {
+        yPercent: 120,
+      },
+      {
+        yPercent: 0,
+        duration: 0.7,
+        delay: 1,
+        stagger: 0.1,
+        ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
+      }
+    );
+
+    gsap.fromTo(
+      ".up",
+      {
+        yPercent: 30,
+        opacity: 0,
+      },
+      {
+        yPercent: 0,
+        opacity: 1.4,
+        duration: 0.7,
+        delay: 1.3,
+        stagger: 0.1,
+        ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
+      }
+    );
+
+    gsap.fromTo(
+      ".up2",
+      {
+        yPercent: -20,
+        opacity: 0,
+      },
+      {
+        yPercent: -50,
+        opacity: 1.2,
+        duration: 0.7,
+        delay: 1.2,
+        stagger: 0.1,
+        ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
+      }
+    );
+  }, 300);
+});
+
+//
 
 lottie.loadAnimation({
   container: grid, // the dom element that will contain the animation
