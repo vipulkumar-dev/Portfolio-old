@@ -1,13 +1,12 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const introContainer = document.querySelector("#intro");
-const introContainer2 = document.querySelector("#intro2");
-const introContainer3 = document.querySelector(".background__color");
+const logo_animation = document.querySelector("#logo_animation");
 
 const animation__container = document.querySelector("#logo_animation");
 
 const anim = lottie.loadAnimation({
-  container: animation__container, // the dom element that will contain the animation
+  container: animation__container,
   renderer: "svg",
   loop: false,
   autoplay: true,
@@ -17,9 +16,7 @@ const anim = lottie.loadAnimation({
 anim.addEventListener("complete", function () {
   setTimeout(() => {
     introContainer.style.transform = "scale(17) rotate(45deg)";
-    introContainer.style.opacity = "0";
-    introContainer2.style.transform = "scale(17) rotate(45deg)";
-    introContainer3.style.transform = "scale(17) rotate(45deg)";
+    logo_animation.style.opacity = "0";
     gsap.fromTo(
       ".heading__span",
       {
@@ -28,23 +25,7 @@ anim.addEventListener("complete", function () {
       {
         yPercent: 0,
         duration: 0.7,
-        delay: 1,
-        stagger: 0.1,
-        ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
-      }
-    );
-
-    gsap.fromTo(
-      ".up",
-      {
-        yPercent: 30,
-        opacity: 0,
-      },
-      {
-        yPercent: 0,
-        opacity: 1.4,
-        duration: 0.7,
-        delay: 1.3,
+        delay: 0.6,
         stagger: 0.1,
         ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
       }
@@ -58,9 +39,25 @@ anim.addEventListener("complete", function () {
       },
       {
         yPercent: -50,
-        opacity: 1.2,
+        opacity: 1,
         duration: 0.7,
-        delay: 1.2,
+        delay: 0.8,
+        stagger: 0.1,
+        ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
+      }
+    );
+
+    gsap.fromTo(
+      ".up",
+      {
+        yPercent: 30,
+        opacity: 0,
+      },
+      {
+        yPercent: 0,
+        opacity: 1,
+        duration: 0.7,
+        delay: 0.9,
         stagger: 0.1,
         ease: CustomEase.create("custom", "M0,0 C0.6,0 0,1 1,1 "),
       }
