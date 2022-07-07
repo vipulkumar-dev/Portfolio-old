@@ -1,6 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const introContainer = document.querySelector("#intro");
+const introContainer2 = document.querySelector("#intro2");
+const introContainer3 = document.querySelector(".background__color");
 
 const animation__container = document.querySelector("#logo_animation");
 
@@ -9,12 +11,15 @@ const anim = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "https://dev-codemax.github.io/Portfolio/bodymovin/data.json",
+  path: "https://dev-codemax.github.io/Portfolio/bodymovin/intro.json",
 });
 
 anim.addEventListener("complete", function () {
   setTimeout(() => {
-    introContainer.style.transform = "translate(0%, -100%)";
+    introContainer.style.transform = "scale(17) rotate(45deg)";
+    introContainer.style.opacity = "0";
+    introContainer2.style.transform = "scale(17) rotate(45deg)";
+    introContainer3.style.transform = "scale(17) rotate(45deg)";
     gsap.fromTo(
       ".heading__span",
       {
