@@ -429,7 +429,7 @@ a {
 .s3 {
   width: 100vw;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
   transition: 1.2s;
   transform: translateY(calc(-100vh - 5vw));
   position: absolute;
