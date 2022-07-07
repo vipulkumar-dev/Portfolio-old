@@ -7,7 +7,7 @@ new fullpage("#fullpage", {
   fixedElements: ".background",
   scrollingSpeed: 1300,
   easingcss3: "cubic-bezier(.70,0,.30,1)",
-  anchors: ["first", "second", "third", "fourth"],
+  anchors: ["first", "second", "third", "fourth", "fifth", "sixth"],
   credits: { enabled: false },
 
   onLeave: function (index, nextIndex, direction) {

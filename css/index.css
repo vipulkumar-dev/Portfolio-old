@@ -72,14 +72,12 @@ a {
   overflow: hidden;
   width: 50vw;
   height: 50vh;
-  position: absolute;
-}
+  position: relative;
+} */
 
-.all__small__wrraper {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
+/* .all__small__wrraper {
+  clip-path: polygon(24% 29%, 84% 30%, 84% 71%, 24% 71%);
+
 } */
 
 .s1 {

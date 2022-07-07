@@ -124,16 +124,35 @@ html body {
 }
 
 .image--works {
-  background: url(https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-v2.0.0-cover.png)
-    no-repeat center;
-  background-size: cover;
+  background: url(../images/projects/1.png) no-repeat center;
+  background-size: contain;
+}
+
+.image--works2 {
+  background: url(../images/projects/2.png) no-repeat center;
+  background-size: contain;
+}
+
+.image--works3 {
+  background: url(../images/projects/3.png) no-repeat center;
+  background-size: contain;
+}
+
+.image--works4 {
+  background: url(../images/projects/4.png) no-repeat center;
+  background-size: contain;
+}
+
+.image--works5 {
+  background: url(../images/projects/5.png) no-repeat center;
+  background-size: contain;
 }
 
 .image {
   display: block;
   position: relative;
   width: 50%;
-  height: 70%;
+  aspect-ratio: 16/9;
   margin: 0 8% 0 auto;
   -webkit-box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.25);
   box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.25);
@@ -180,7 +199,7 @@ html body {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 970px) {
   .fullpage__slide {
     height: 100%;
     position: absolute;
@@ -191,7 +210,7 @@ html body {
 
   .image {
     position: absolute;
-    aspect-ratio: 16/12;
+    aspect-ratio: 16/9;
     width: 80%;
     height: revert;
     margin: auto 10%;
