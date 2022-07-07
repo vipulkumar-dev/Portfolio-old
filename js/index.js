@@ -10,7 +10,7 @@ const anim = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "https://dev-codemax.github.io/Portfolio/bodymovin/intro.json",
+  path: "http://codemax.info/bodymovin/intro.json",
 });
 
 anim.addEventListener("complete", function () {
@@ -72,7 +72,7 @@ lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "https://dev-codemax.github.io/Portfolio//bodymovin/grid.json",
+  path: "http://codemax.info/bodymovin/grid.json",
 });
 
 gsap.to(".contact__content", {
