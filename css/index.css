@@ -663,13 +663,13 @@ a {
 }
 
 .s4 .button:hover svg {
-  transform: translate(0.2em, 0.15em) rotate(45deg);
+  transform: translate(0.2em, 0.28em) rotate(45deg);
 }
 .s4 svg {
   width: clamp(11px, 4vw, 35px);
   height: clamp(11px, 4vw, 35px);
   fill: var(--text-color);
-  transform: translate(0, 0.15em) rotate(45deg);
+  transform: translate(0, 0.28em) rotate(45deg);
   padding-top: 4px;
   transition: transform 0.3s;
 }
