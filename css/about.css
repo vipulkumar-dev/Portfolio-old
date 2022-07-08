@@ -67,6 +67,7 @@ html body {
   top: 50%;
   transform: translate(0, -50%);
   z-index: 200;
+  margin-inline: 7vw;
 }
 
 .section .title__text {
@@ -124,8 +125,7 @@ html body {
 }
 
 .image--works {
-  background: url(https://themes.getbootstrap.com/wp-content/uploads/2018/06/purpose-website-ui-kit-v2.0.0-cover.png)
-    no-repeat center;
+  background: url(../images/dp.jpg) no-repeat center;
   background-size: cover;
 }
 
@@ -199,6 +199,7 @@ html body {
     position: static;
     width: 87.5%;
     transform: translate(0, 0%);
+    margin-inline: 0vw;
   }
 
   .section .title__text {
