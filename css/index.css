@@ -553,7 +553,7 @@ a {
   width: 0px !important;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .s3 .seeAllButton {
     padding: 1rem 1.5rem;
     font-size: 1.6rem;
