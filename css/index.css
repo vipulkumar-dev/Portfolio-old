@@ -125,15 +125,15 @@ a {
 }
 
 .s1 .small__heading {
-  font-size: 12px;
-  margin-right: 284px;
+  font-size: 14px;
+  margin-right: 200px;
   margin-bottom: 362px;
   margin-top: 100px;
 }
 
 .s1 .small__heading .color {
   color: var(--primary-color);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 
 .s1 .heading {
