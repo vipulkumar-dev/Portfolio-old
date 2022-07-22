@@ -56,6 +56,10 @@ a {
   text-decoration: none;
 }
 
+.nav__container .nav__bar .logo svg .st1 {
+  stroke: var(--color-light) !important;
+}
+
 .s4 {
   text-align: center;
   background-color: var(--text-color);
