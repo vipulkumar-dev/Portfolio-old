@@ -26,12 +26,14 @@
 .nav__container .nav__bar .logo svg {
   position: absolute;
   width: 32px;
-  fill: var(--text-color);
   transform: translateY(-40%);
 }
 
-.nav__container .nav__bar .logo svg .svg__color {
-  fill: var(--text-color);
+.nav__container .nav__bar .logo svg .st1 {
+  fill: none;
+  stroke: var(--text-color);
+  stroke-width: 75;
+  stroke-miterlimit: 10;
 }
 
 .nav__container .nav__bar ul {
