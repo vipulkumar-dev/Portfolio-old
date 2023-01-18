@@ -94,5 +94,5 @@ gsap.to(".circulerText", {
     end: "bottom top",
     scrub: 1,
   },
-  rotate: 720,
+  rotate: 360,
 });
