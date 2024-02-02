@@ -10,7 +10,7 @@ const anim = lottie.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-  path: "https://codemax.info/bodymovin/intro.json",
+  path: "https://vipulkumar-dev.github.io/Portfolio-old/bodymovin/intro.json",
 });
 
 anim.addEventListener("complete", function () {
